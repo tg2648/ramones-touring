@@ -15,7 +15,11 @@
     <div id="year-container"></div>
   
     <script>
-      const DATA_URL = "https://raw.githubusercontent.com/tg2648/ramones-touring/master/data/data.json";
+      const DATA_URL = "https://tg2648.github.io/ramones-touring/data.json";
+
+      fetch(DATA_URL)
+        .then(response => response.json())
+        .then(data => console.log(data));
 
       function addYear(element) {
         let yearEl = document.createElement("div");
