@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Touring Life of the Ramones</title>
+  <style>
+    .border {
+      border: 1px solid black;
+    }
+
+    .concert {
+      background-color: green;
+    }
+
+    .release {
+      background-color: crimson;
+    }
+
+    .blank {
+      background-color: gray;
+    }
+
+    .year {
+      width: 30px;
+      height: 30px;
+      margin: 2px;
+    }
+
+    #year-container {
+      display: flex;
+      flex-flow: row wrap;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #title {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; 
+    }
+
+    @media all and (min-width: 768px) {
+      #year-container, #title {
+        width: 640px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <h1 id="title">Title</h1>
+
+  <div id="year-container"></div>
+
+  <script>
+    function addYear(element) {
+      let yearEl = document.createElement("div");
+      yearEl.className = "year border concert"
+      element.appendChild(yearEl);
+    }
+
+    let containerEl = document.getElementById("year-container");
+    for (let i = 0; i < 50; i++) {
+      addYear(containerEl);
+    }
+  </script>
+
+</body>
+</html>
