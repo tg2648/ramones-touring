@@ -1,0 +1,43 @@
+.border {
+  border: 1px solid black;
+}
+
+.concert {
+  background-color: green;
+}
+
+.release {
+  background-color: crimson;
+}
+
+.blank {
+  background-color: gray;
+}
+
+.year {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+}
+
+#year-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+#title {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; 
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media all and (min-width: 768px) {
+  #container {
+    width: 640px;
+  }
+}
